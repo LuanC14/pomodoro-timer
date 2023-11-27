@@ -1,17 +1,13 @@
-import {
-  ReactNode,
-  createContext,
-  useEffect,
-  useReducer,
-  useState,
-} from "react";
+import {ReactNode, createContext, useEffect, useReducer, useState } from "react";
 import { Cycle, cyclesReducer } from "../reducers/cycles/reducer";
+import { differenceInSeconds } from "date-fns";
+
 import {
   addNewCycleAction,
   interruptCurrentCycleAction,
   markCurrentCycleAsFinishedAction,
 } from "../reducers/cycles/actions";
-import { differenceInSeconds } from "date-fns";
+
 
 interface CreateCycleData {
   task: string;
